@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:get_demo/complete/complete_bind.dart';
+import 'package:get_demo/complete/complete_page.dart';
 import 'package:get_demo/obs/obs_page.dart';
 import 'package:get_demo/reactive/reactive_page.dart';
 import 'package:get_demo/simple_state/simple_state_page.dart';
@@ -90,6 +92,9 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(onPressed: () {
               Get.to(() => ReactivePage());
             }, child: const Text('reactive state management')),
+            ElevatedButton(onPressed: () {
+              Get.to(() => const CompletePage(), binding: CompleteBind());
+            }, child: const Text('complete example page')),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
